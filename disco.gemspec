@@ -24,5 +24,4 @@ SPEC = Gem::Specification.new do |s|
   s.add_dependency('actionpack', '~> 3.0')
   s.require_path = "lib"
   s.has_rdoc = true
-  s.extra_rdoc_files = ["README"]
 end
