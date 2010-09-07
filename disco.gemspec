@@ -19,6 +19,9 @@ SPEC = Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = "Adds a simple Markdown helper to your Rails views."
   s.files = PKG_FILES.to_a
+  s.add_dependency('rdiscount', '~> 1.6')
+  s.add_dependency('activesupport', '~> 3.0')
+  s.add_dependency('actionpack', '~> 3.0')
   s.require_path = "lib"
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
