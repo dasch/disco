@@ -8,6 +8,14 @@ class DiscoTest < ActiveSupport::TestCase
     assert_markdown "<p><strong>hello</strong></p>", "**hello**"
   end
 
+  test "should escape HTML by default" do
+    assert_markdown "<p>Hello &lt;em>dawg&lt;/em></p>", "Hello <em>dawg</em>"
+  end
+
+  test "should not escape HTML when :allow_html => true" do
+    assert_markdown "<p>Hello <em>dawg</em></p>", "Hello <em>dawg</em>", :allow_html => true
+  end
+
   private
 
   def assert_markdown(expected_html, mkd, options = {})
