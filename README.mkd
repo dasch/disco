@@ -1,0 +1,27 @@
+Disco
+=====
+
+A simple Rails plugin that adds a `markdown` helper to your views.
+
+Disco uses [RDiscount](http://github.com/rtomayko/rdiscount) internally to
+parse and process the Markdown.
+
+For information about the Markdown syntax, visit
+[the official page](http://daringfireball.net/projects/markdown/).
+
+
+Example
+=======
+
+Process the Markdown string `mkd` using the RDiscount parser.
+
+    markdown("Hello *John*!") #=> "<p>Hello <em>John</em>!</p>\n"
+
+If `:allow_html => true` is supplied, HTML code will not be
+escaped.
+
+The returned string is `html_safe` and can be used directly
+in your views.
+
+
+Copyright (c) 2010 Daniel Schierbeck, released under the MIT license
