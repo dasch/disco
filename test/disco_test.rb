@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class DiscoTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  include Disco::MarkdownHelper
+
+  test "should parse simple markdown" do
+    assert_equal "<p><em>hello</em></p>\n", markdown("*hello*")
   end
 end
