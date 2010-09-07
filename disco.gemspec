@@ -12,7 +12,7 @@ PKG_FILES = FileList[
 
 SPEC = Gem::Specification.new do |s|
   s.name = "disco"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
   s.author = "Daniel Schierbeck"
   s.email = "daniel.schierbeck@gmail.combination"
   s.homepage = "http://github.com/dasch/disco"
