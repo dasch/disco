@@ -1,4 +1,6 @@
 
+require 'rake'
+
 PKG_FILES = FileList[
   '[a-zA-Z]*',
   'generators/**/*',
@@ -21,4 +23,3 @@ SPEC = Gem::Specification.new do |s|
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
 end
-
