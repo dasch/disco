@@ -4,13 +4,13 @@ require 'rdiscount'
 module Disco
   module MarkdownHelper
     def markdown(mkd, options = {})
-      extensions = [:smart, :autolink]
+      d = RDiscount.new(mkd)
 
-      unless options[:allow_html]
-        extensions << :filter_html
-      end
-
-      RDiscount.new(mkd, *extensions).to_html.html_safe
+      d.smart = true
+      d.autolink = true
+      d.filter_html = !options[:allow_html]
+      
+      ActiveSupport::SafeBuffer.new(d.to_html)
     end
   end
 end

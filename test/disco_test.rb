@@ -16,6 +16,10 @@ class DiscoTest < ActiveSupport::TestCase
     assert_markdown "<p>Hello <em>dawg</em></p>", "Hello <em>dawg</em>", :allow_html => true
   end
 
+  test "should be html_safe" do
+    assert markdown("*foo*").html_safe?
+  end
+
   private
 
   def assert_markdown(expected_html, mkd, options = {})
