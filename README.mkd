@@ -13,7 +13,7 @@ For information about the Markdown syntax, visit
 Example
 =======
 
-Process the Markdown string `mkd` using the RDiscount parser.
+Process the Markdown string using the RDiscount parser:
 
     markdown("Hello *John*!") #=> "<p>Hello <em>John</em>!</p>\n"
 
